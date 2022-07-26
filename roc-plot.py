@@ -13,7 +13,7 @@ def plot_ROC(y_true, y_score,n_thresholds=10):
     plt.plot(np.linspace(0,1,10), np.linspace(0,1,10), label="Diagonal")
     for x, y, txt in zip(fpr[::num_cuts], tpr[::num_cuts], thresholds[::num_cuts]):
         plt.annotate(np.round(txt,2), (x, y-0.04))
-    rnd_idx = 2
+
     plt.legend(loc="upper left")
     plt.xlabel("FPR")
     plt.ylabel("TPR")
